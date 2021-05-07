@@ -1,0 +1,42 @@
+name: Mermaid
+version: 1.0.0
+description: View your mermaid code with the famous mermaid.js library.
+author: Jeong-Ho, Eun
+homepage: https://mermaid-js.github.io/mermaid/#/
+licence: MIT
+
+settings:
+  tool: none
+
+forms:
+  fields:
+
+    theme:
+      type: select
+      label: Choose one of the built-in themes (default: default)
+      options:
+        default: default
+        base: base
+        dark: dark
+        forest: forest
+        neutral: neutral
+    
+    securityLevel:
+      type: radio
+      label: Sets the level of trust to be used on the parsed diagrams. (default: strict)
+      options:
+        strict: strict
+        loose: loose
+    
+    htmlLabels:
+      type: radio
+      label: Flag for setting whether or not a html tag should be used for rendering labels on the edges. (default: true)
+      options:
+        "true": "true"
+        "false": "false"
+        
+    fontFamily:
+      type: text
+      label: The font to be used for the rendered diagrams. (default: "trebuchet ms", verdana, arial)
+      placeholder: 
+        
