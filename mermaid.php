@@ -51,21 +51,21 @@ class Mermaid extends Plugin
 		}
 		
 		$this->addJS('/mermaid/public/mermaid.min.js');
-		
-		$this->addInlineJS("mermaid.initialize({'theme': '".$theme."', 'securityLevel': '".$securityLevel."', 'htmlLabels': ".$htmlLabels.", 'fontFamily': '".$fontFamily."'});");
 	
 		/* initialize the script */
-		$this->addInlineJS(<<<STR_END
+		$this->addInlineJS('
 		document.addEventListener("DOMContentLoaded", function() {
-			document.querySelectorAll('code.language-mermaid').forEach(function(element, index) {
-				var content = element.innerHTML.replace(/&amp;/g, '&');
-				tempDiv = document.createElement('div');
+			document.querySelectorAll("code.language-mermaid").forEach(function(element, index) {
+				var content = element.innerHTML.replace(/&amp;/g, "&");
+				tempDiv = document.createElement("div");
 				tempDiv.className = "mermaid";
 				tempDiv.align = "center";
 				tempDiv.innerHTML = content;
 				element.parentNode.parentNode.replaceChild(tempDiv, element.parentNode);
 			});
 		});
-		STR_END);
+		');
+		
+		$this->addInlineJS("mermaid.initialize({'theme': '".$theme."', 'securityLevel': '".$securityLevel."', 'htmlLabels': ".$htmlLabels.", 'fontFamily': '".$fontFamily."'});");
 	}
 }
