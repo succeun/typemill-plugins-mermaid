@@ -13,7 +13,7 @@ forms:
 
     theme:
       type: select
-      label: Choose one of the built-in themes (default: default)
+      label: "Choose one of the built-in themes (default: default)"
       options:
         default: default
         base: base
@@ -23,20 +23,20 @@ forms:
     
     securityLevel:
       type: radio
-      label: Sets the level of trust to be used on the parsed diagrams. (default: strict)
+      label: "Sets the level of trust to be used on the parsed diagrams. (default: strict)"
       options:
         strict: strict
         loose: loose
     
     htmlLabels:
       type: radio
-      label: Flag for setting whether or not a html tag should be used for rendering labels on the edges. (default: true)
+      label: "Flag for setting whether or not a html tag should be used for rendering labels on the edges. (default: true)"
       options:
         "true": "true"
         "false": "false"
         
     fontFamily:
       type: text
-      label: The font to be used for the rendered diagrams. (default: "trebuchet ms", verdana, arial)
+      label: "The font to be used for the rendered diagrams. (default: 'trebuchet ms', verdana, arial)"
       placeholder: 
         
